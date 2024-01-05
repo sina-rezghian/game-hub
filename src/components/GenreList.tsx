@@ -3,11 +3,11 @@ import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
 const GenreList = () => {
-  const { data , isLoading , error} = useGenres();
-  
+  const { data, isLoading, error } = useGenres();
+
   if (error) return null;
 
-  if (isLoading) return <Spinner/>;
+  if (isLoading) return <Spinner />;
 
   return (
     <List>
@@ -19,7 +19,7 @@ const GenreList = () => {
               borderRadius={8}
               src={getCroppedImageUrl(genre.image_background)}
             />
-            <Text fontSize='lg'>{genre.name}</Text>
+            <Text fontSize="lg">{genre.name}</Text>
           </HStack>
         </ListItem>
       ))}
