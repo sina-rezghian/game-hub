@@ -48,9 +48,7 @@ function App() {
             setGameQuery({ ...gameQuery, platform })
           }
         />
-        <GameGrid
-          gameQuery={gameQuery}
-        />
+        <GameGrid gameQuery={gameQuery} />
       </GridItem>
     </Grid>
   );
